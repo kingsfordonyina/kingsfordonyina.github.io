@@ -11,10 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Economics,University of North Carolina at Chapel Hill, (2021 - present)
-* M.A. in Applied Economics, University of North Carolina at Greensboro, 2020
-* M.Phil. in Economics, University of Ghana, 2018
-* B.A. in Economics and Statistics, University of Ghana, 2015
+* Ph.D in Public Policy,University of North Carolina at Charlotte, (2023 - present)
+* M.A. in Economics, University of North Carolina at Greensboro, 2023
+* B.A. in Economics with Political Science (Education), University of Education, Winneba, Ghana, 2020
 
 Work experience
 ======
@@ -43,4 +42,4 @@ Publications
 ---
 
 
-Find my full CV [here](/files/2024-12-02_dturkson_CV.pdf).
+Find my full CV [here](/files/12-4-2024_konyinacv.pdf).
