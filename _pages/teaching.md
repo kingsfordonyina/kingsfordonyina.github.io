@@ -5,14 +5,21 @@ excerpt: ""
 author_profile: true
 ---
 
-### Instructor
-- Econ 101 - Intro to Economics 
-    - Summer 2024
-    - [Fall 2024](https://econ.unc.edu/wp-content/uploads/sites/38/2023/08/ECON_101_003_A_2239.pdf)
-    - [Summer 2023](https://econ.unc.edu/wp-content/uploads/sites/38/2023/06/ECON_101_002_SS2_2234.pdf)
+### Teaching Assistantship
+
+University of North at Charlotte									
+Department of Economics										            
+•	DSBA/ECON 6112: Graduate Econometrics (Spring ‘24, Spring ‘24)
+•	ECN 3112: Econometrics (Fall ‘23, Fall ‘24)
 
 
-### TA Experience
-- Econ 440 - Analysis of Public Finance
-- Econ 410 - Intermediate Microeconomics
-- Econ 101 - Intro to Economics
+Eastern Illinois University									                    
+Department of Economics										           
+•	ECN 2801G: Principles of Macroeconomics (Fall ‘21 & ‘22, Spring ‘22 & ‘23)
+•	ECN 2802G: Principles of Microeconomics (Fall ‘21 & ‘22, Spring ‘22 & ‘23)
+
+University of Education, Winneba								   
+Department of Economics Education									 
+•	ECNS 231: Elements of Microeconomics   
+•	ECNS 242: Economy of Ghana 
+•	ECNS 354: Labor Economics    
