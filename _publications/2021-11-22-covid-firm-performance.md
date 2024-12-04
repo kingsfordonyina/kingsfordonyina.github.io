@@ -1,5 +1,5 @@
 ---
-title: "Government Policies and Firm Performance in the COVID-19 Pandemic Era: A Sectoral Analysis"
+title: "Impact of social protection policies on inclusive growth in Sub-Saharan Africa: evidence from bias-corrected dynamic panel."
 collection: publications
 category: manuscripts
 permalink: /publication/paper_k1
