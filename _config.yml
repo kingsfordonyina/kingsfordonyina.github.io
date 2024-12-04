@@ -10,7 +10,7 @@
 locale                   : "en-US"
 title                    : "Kingsford Onyina"
 title_separator          : "-"
-name                     : &name "Danny Turkson"
+name                     : &name "Kingsford Onyina"
 description              : &description "personal description"
 url                      : https://kingsfordonyina.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -21,30 +21,30 @@ repository               : "kingsfordonyina/kingsfordonyina.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.JPG"
-  name             : "Danny Turkson"
+  avatar           : "profile_kingsford.JPG"
+  name             : "Kingsford Onyina"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Econ Student at UNC"
-  location         : "Chapel Hill, NC"
-  employer         : "UNC Chapel Hill"
+  bio              : "Ph.D. Public Policy Student at UNC Charlotte"
+  location         : "Charlotte, NC"
+  employer         : "UNC Charlotte"
   uri              : # URL
-  email            : "dturkson@unc.edu" 
+  email            : "konyina@charlotte.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=L2GtW8UAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=eewM6jwAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : "https://orcid.org/0000-0002-1664-6899"
+  orcid            : "https://orcid.org/0009-0005-6302-2797"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     :  "https://www.researchgate.net/profile/Danny-Turkson?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoiaG9tZSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19"
+  researchgate     :  "https://www.researchgate.net/profile/Kingsford-Onyina-2"
   scopus           : # URL
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "dannyturkson"
+  github           : "kingsfordonyina"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "dannyturkson"
+  linkedin         : "konyina"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -66,12 +66,12 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : "dan_jux_kiddin"
+  twitter          : "KingsfordO_"
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "kingsfordonyina2101"
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
