@@ -7,6 +7,7 @@ author_profile: true
 
 ### Teaching Assistantship
 
+```
 University of North at Charlotte									
 Department of Economics										            
 DSBA/ECON 6112: Graduate Econometrics (Spring ‘24, Spring ‘24)
@@ -23,3 +24,4 @@ Department of Economics Education
 ECNS 231: Elements of Microeconomics   
 ECNS 242: Economy of Ghana 
 ECNS 354: Labor Economics    
+```
