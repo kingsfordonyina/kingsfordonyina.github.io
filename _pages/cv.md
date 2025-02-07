@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Public Policy,University of North Carolina at Charlotte, (2023 - present)
-* M.A. in Economics, University of North Carolina at Greensboro, 2023
-* B.A. in Economics with Political Science (Education), University of Education, Winneba, Ghana, 2020
+* Ph.D in Public Policy,University of North Carolina at Charlotte
+* M.A. in Economics, Eastern Illinois University, Charleston
+* B.A. in Economics with Political Science (Education), University of Education, Winneba, Ghana
 
 
 Publications
