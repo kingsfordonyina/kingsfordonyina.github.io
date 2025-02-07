@@ -1,11 +1,9 @@
 ---
 permalink: /teaching/
-title: "Teaching"
+title: "Teaching Experience"
 excerpt: ""
 author_profile: true
 ---
-
-# Teaching Experience
 
 ## University of North Carolina at Charlotte  
 ### Department of Economics  
