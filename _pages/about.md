@@ -14,5 +14,5 @@ In his free time, Kingsford is deeply committed to empowering students, particul
 
 ---
 
-Here is my [Curriculum Vitae](/files/12-4-2024_konyinacv.pdf). You can contact me via [konyina@charlotte.edu](mailto:konyina@charlott.edu).
+Here is my [Curriculum Vitae](/files/12-4-2024_konyinacv.pdf). You can contact me via [konyina@charlotte.edu](mailto:konyina@charlotte.edu) or [kingsford.onyina1@gmail.com](mailto:kingsford.onyina1@gmail.com) 
 
