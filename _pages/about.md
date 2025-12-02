@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Kingsford is a Ph.D. student in Public Policy at [The University of North Carolina at Charlotte](https://publicpolicy.charlotte.edu/). His primary area of interest is social safety nets, international development policy and applied econometrics.
+I am a PhD student in Public Policy Analysis at [The University of North Carolina at Charlotte](https://publicpolicy.charlotte.edu/). My research interest includes social safety nets, international development policy and applied econometrics.
 
 ---
 
