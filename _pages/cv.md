@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Public Policy,University of North Carolina at Charlotte
-* M.A. in Economics, Eastern Illinois University, Charleston
-* B.A. in Economics with Political Science (Education), University of Education, Winneba, Ghana
+* Ph.D Public Policy,University of North Carolina at Charlotte
+* M.A. Economics, Eastern Illinois University, Charleston
+* B.A. Economics with Political Science (Education), University of Education, Winneba, Ghana
 
 
 Publications
