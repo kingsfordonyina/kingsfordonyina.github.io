@@ -1,6 +1,6 @@
 ---
 permalink: /teaching/
-title: "Teaching Experience"
+title: "Teaching Experience Update"
 excerpt: ""
 author_profile: true
 ---
