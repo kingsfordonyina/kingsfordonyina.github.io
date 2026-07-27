@@ -1,0 +1,207 @@
+/* ==========================================================================
+   CUSTOM OVERRIDES  — mobile polish + modern refresh
+   Added on top of the AcademicPages theme. Self-contained (uses literal
+   values, no theme variables), so it always compiles and is easy to remove:
+   delete this file and its @import line at the bottom of assets/css/main.scss.
+   ========================================================================== */
+
+/* Accent used across links, buttons and headings */
+$accent: #2a6f97;
+$accent-dark: #1c4d6b;
+
+/* --------------------------------------------------------------------------
+   1. Site-wide modern polish (all screen sizes)
+   -------------------------------------------------------------------------- */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Crisper, more readable body copy */
+.page__content {
+  line-height: 1.65;
+}
+
+.page__content p {
+  margin: 0 0 1.1em;
+}
+
+/* Refresh the washed-out default link colour */
+.page__content a,
+.page__content a:visited {
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42, 111, 151, 0.25);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.page__content a:hover {
+  color: $accent-dark;
+  border-bottom-color: $accent-dark;
+}
+
+/* Page title: a touch bolder and tighter for a modern feel */
+.page__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Softer horizontal rules */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ececec;
+  margin: 2em 0;
+}
+
+/* Masthead: subtle depth + clearer links */
+.masthead {
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+.greedy-nav a {
+  font-weight: 500;
+}
+
+.greedy-nav a:hover {
+  color: $accent;
+}
+
+/* Buttons: rounded and on-brand */
+.btn {
+  border-radius: 6px;
+}
+
+.btn--inverse {
+  border: 1px solid #d5d8da;
+}
+
+/* --------------------------------------------------------------------------
+   2. Mobile layout ( up to 924px — below the theme's desktop breakpoint )
+   Turns the cramped avatar + "Follow" dropdown into a clean centred card
+   with a large photo and always-visible links.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 924px) {
+
+  /* Stack the author block vertically and centre it */
+  div[itemtype*="schema.org/Person"] {
+    display: block;
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto 1.5em;
+  }
+
+  /* Large, circular profile photo */
+  .author__avatar {
+    display: block;
+    width: auto;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .author__avatar img {
+    display: block;
+    width: 128px;
+    height: 128px;
+    max-width: 128px;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e6e8ea;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.10);
+  }
+
+  /* Name + bio, centred */
+  .author__content {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 0.75em;
+    line-height: 1.35;
+  }
+
+  .sidebar .author__name,
+  .author__name {
+    font-size: 1.35em;
+    font-weight: 700;
+    margin: 0.35em 0 0.15em;
+  }
+
+  .author__bio,
+  .author__pronouns {
+    margin: 0.15em 0 0.6em;
+    color: #5a6066;
+    font-size: 0.95em;
+  }
+
+  /* Reveal the links inline (no more "Follow" dropdown) */
+  .author__urls-wrapper {
+    display: block;
+    text-align: left;
+  }
+
+  .author__urls-wrapper > button.btn {
+    display: none;              /* hide the Follow toggle on mobile */
+  }
+
+  .author__urls {
+    display: block !important;
+    position: static !important;
+    margin: 0 auto;
+    padding: 0.5em 0 0;
+    max-width: 260px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
+    z-index: auto;
+  }
+
+  .author__urls:before,
+  .author__urls:after {
+    display: none !important;   /* remove the little pointer arrows */
+  }
+
+  .author__urls li {
+    white-space: normal;
+    border-bottom: 1px solid #f0f1f2;
+  }
+
+  .author__urls li:last-child {
+    border-bottom: 0;
+  }
+
+  /* Bigger, finger-friendly tap targets */
+  .author__urls a {
+    display: block;
+    padding: 11px 6px;
+    font-size: 1em;
+    color: #3a4045;
+  }
+
+  .author__urls a:hover {
+    color: $accent;
+  }
+
+  .author__urls i,
+  .author__urls .ai {
+    color: $accent;
+    margin-right: 4px;
+  }
+
+  /* Comfortable page padding so text isn't edge-to-edge */
+  .page {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* Roomier tap targets in the top nav */
+  .greedy-nav .visible-links a {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+}
