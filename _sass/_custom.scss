@@ -181,23 +181,24 @@ hr {
   display: flex;
   align-items: center;
   gap: 2.25rem;
-  padding: 2.5rem 2.4rem;
+  padding: 2.4rem 2.3rem;
   margin: 0.25rem 0 2.25rem;
   border-radius: 18px;
-  background: linear-gradient(135deg, $accent 0%, $accent-darker 100%);
-  color: #ffffff;
-  box-shadow: 0 10px 28px rgba(15, 118, 110, 0.16);
+  background: $tint;
+  border: 1px solid $tint-border;
+  color: $ink;
+  box-shadow: 0 4px 16px rgba(15, 118, 110, 0.06);
 }
 
 .ko-hero__photo { flex: 0 0 auto; }
 
 .ko-hero__photo img {
-  width: 172px;
-  height: 172px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 1px $tint-border, 0 6px 18px rgba(0, 0, 0, 0.10);
 }
 
 .ko-hero__text { flex: 1 1 auto; }
@@ -206,32 +207,32 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.72em;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 0.5em;
-  color: rgba(255, 255, 255, 0.82);
+  color: $accent;
 }
 
 .ko-hero__name {
-  font-size: 2.3em;
+  font-size: 2.25em;
   line-height: 1.08;
   font-weight: 700;
   margin: 0 0 0.2em;
-  color: #ffffff;
+  color: $accent-darker;
   letter-spacing: -0.015em;
 }
 
 .ko-hero__title {
-  font-size: 1.1em;
+  font-size: 1.08em;
   font-weight: 500;
   margin: 0 0 0.85em;
-  color: rgba(255, 255, 255, 0.9);
+  color: #4a5654;
 }
 
 .ko-hero__lede {
   font-size: 1.02em;
   line-height: 1.6;
   margin: 0 0 1.4em;
-  color: rgba(255, 255, 255, 0.9);
+  color: #3c4746;
   max-width: 48ch;
 }
 
@@ -249,18 +250,18 @@ hr {
 .ko-btn:hover { transform: translateY(-1px); }
 
 .ko-btn--solid {
-  background: #ffffff;
-  color: $accent-dark !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+  background: $accent;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.18);
 }
-.ko-btn--solid:hover { background: #f2fbf9; }
+.ko-btn--solid:hover { background: $accent-dark; }
 
 .ko-btn--ghost {
-  background: rgba(255, 255, 255, 0.10);
-  color: #ffffff !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  background: #ffffff;
+  color: $accent-dark !important;
+  border: 1.5px solid $tint-border;
 }
-.ko-btn--ghost:hover { background: rgba(255, 255, 255, 0.2); }
+.ko-btn--ghost:hover { background: $tint; border-color: $accent; }
 
 /* --------------------------------------------------------------------------
    5. Homepage SECTIONS + CARDS  (calmer)
