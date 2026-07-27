@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CUSTOM OVERRIDES  — modern & bold redesign (teal / forest green)
+   CUSTOM OVERRIDES  — refined academic redesign (teal / forest green)
    Sits on top of the AcademicPages theme. Self-contained (literal values,
    no theme variables) so it always compiles and is easy to remove:
    delete this file and its @import line at the bottom of assets/css/main.scss.
@@ -8,13 +8,14 @@
 $accent:        #0f766e;   /* teal-700 */
 $accent-dark:   #115e59;
 $accent-darker: #134e4a;
-$accent-bright: #0d9488;
-$tint:          #ecfdf5;   /* pale teal wash */
-$ink:           #1f2a2e;
-$muted:         #5a6a6a;
+$tint:          #f0faf7;   /* very pale teal wash */
+$tint-border:   #d9ede8;
+$ink:           #24302f;
+$muted:         #5c6a68;
+$hairline:      #e7ecea;
 
 /* --------------------------------------------------------------------------
-   1. Site-wide polish (all pages)
+   1. Site-wide typography + links (applies to every page)
    -------------------------------------------------------------------------- */
 
 body {
@@ -23,206 +24,249 @@ body {
   color: $ink;
 }
 
-.page__content {
+.page__content,
+.archive {
   line-height: 1.7;
-  font-size: 1.05em;
+}
+
+.page__content {
+  font-size: 1.03em;
 }
 
 .page__content p {
-  margin: 0 0 1.15em;
+  margin: 0 0 1.1em;
 }
 
 .page__content h1,
 .page__content h2,
-.page__content h3 {
+.page__content h3,
+.archive h2,
+.archive h3 {
   color: $accent-darker;
   letter-spacing: -0.01em;
 }
 
-/* Content links — teal, no heavy underline */
-.page__content a,
-.page__content a:visited {
+/* Content links — teal, restrained underline */
+.page__content a:not(.ko-btn):not(.ko-pub__link):not(.ko-link-more),
+.page__content a:not(.ko-btn):visited,
+.archive .archive__item-excerpt a,
+.archive .wordwrap a {
   color: $accent;
   text-decoration: none;
   border-bottom: 1px solid rgba(15, 118, 110, 0.28);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.page__content a:hover {
+.page__content a:not(.ko-btn):hover,
+.archive .archive__item-excerpt a:hover {
   color: $accent-dark;
   border-bottom-color: $accent-dark;
 }
 
-/* Links that are part of custom components shouldn't get the underline */
+/* Component links never get the underline treatment */
 .ko-hero a,
 .ko-btn,
 .ko-card a,
 .ko-pub__link,
 .ko-link-more,
-.ko-contact__actions a {
+.ko-contact__actions a,
+.ko-about a {
   border-bottom: 0 !important;
+}
+.ko-about a {
+  color: $accent !important;
+  border-bottom: 1px solid rgba(15,118,110,.28) !important;
 }
 
 hr {
   border: 0;
   height: 1px;
-  background: #e6ebe9;
-  margin: 2.25em 0;
+  background: $hairline;
+  margin: 2em 0;
 }
 
-/* Masthead: crisp, subtle depth, teal hover + underline on the active feel */
+/* Masthead: clean and light */
 .masthead {
-  border-bottom: 1px solid #e6ebe9;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid $hairline;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
 }
+.greedy-nav { background: #ffffff; }
+.greedy-nav a { font-weight: 500; }
+.greedy-nav a:hover { color: $accent; }
+.greedy-nav .visible-links a:before { background: $accent; }
 
-.greedy-nav {
-  background: #ffffff;
-}
+.btn { border-radius: 8px; }
+.btn--inverse { border: 1px solid #d5dbd9; }
 
-.greedy-nav a {
-  font-weight: 500;
-}
+/* --------------------------------------------------------------------------
+   2. Page header (Publications / Teaching / CV titles)
+   -------------------------------------------------------------------------- */
 
-.greedy-nav a:hover {
-  color: $accent;
-}
-
-.greedy-nav .visible-links a:before {
-  background: $accent;   /* the theme's animated underline */
-}
-
-/* Buttons theme-wide */
-.btn {
-  border-radius: 8px;
-}
-
-.btn--inverse {
-  border: 1px solid #d5dbd9;
-}
-
-/* Page titles on inner pages */
 .page__title,
-.archive__item-title {
+.archive .page__title {
   font-weight: 700;
   color: $accent-darker;
   letter-spacing: -0.01em;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.page__title:after,
+.archive .page__title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  border-radius: 3px;
+  background: $accent;
+}
+
+/* Section headings on inner pages (e.g. CV "Education", publication groups) */
+.archive > h2,
+.page__content > h2 {
+  font-weight: 700;
+  color: $accent-darker;
+  margin-top: 1.6em;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid $tint-border;
 }
 
 /* --------------------------------------------------------------------------
-   2. Homepage HERO
+   3. Publication / teaching list items  ->  cards
+   -------------------------------------------------------------------------- */
+
+.archive__item {
+  background: #ffffff;
+  border: 1px solid $hairline;
+  border-left: 4px solid $accent;
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin: 0 0 1.1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(15, 118, 110, 0.10);
+}
+
+.archive .archive__item a { text-decoration: none; }
+
+.archive__item-title {
+  margin-top: 0 !important;
+  font-size: 1.15em;
+  line-height: 1.35;
+}
+
+.archive__item-title a {
+  color: $accent-darker !important;
+  border-bottom: 0 !important;
+}
+.archive__item-title a:hover { color: $accent !important; }
+
+.archive__item-excerpt {
+  color: $muted;
+  font-size: 0.97em;
+}
+
+/* --------------------------------------------------------------------------
+   4. Homepage HERO  (calmer than before)
    -------------------------------------------------------------------------- */
 
 .ko-hero {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2.75rem 2.5rem;
-  margin: 0.5rem 0 2.5rem;
-  border-radius: 20px;
-  background: linear-gradient(135deg, $accent-darker 0%, $accent 55%, $accent-bright 100%);
+  gap: 2.25rem;
+  padding: 2.5rem 2.4rem;
+  margin: 0.25rem 0 2.25rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, $accent 0%, $accent-darker 100%);
   color: #ffffff;
-  box-shadow: 0 18px 40px rgba(15, 118, 110, 0.22);
+  box-shadow: 0 10px 28px rgba(15, 118, 110, 0.16);
 }
 
-.ko-hero__photo {
-  flex: 0 0 auto;
-}
+.ko-hero__photo { flex: 0 0 auto; }
 
 .ko-hero__photo img {
-  width: 190px;
-  height: 190px;
+  width: 172px;
+  height: 172px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-.ko-hero__text {
-  flex: 1 1 auto;
-}
+.ko-hero__text { flex: 1 1 auto; }
 
 .ko-hero__eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.75em;
+  letter-spacing: 0.12em;
+  font-size: 0.72em;
   font-weight: 600;
-  margin: 0 0 0.4em;
-  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 0.5em;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .ko-hero__name {
-  font-size: 2.6em;
-  line-height: 1.05;
-  font-weight: 800;
-  margin: 0 0 0.15em;
+  font-size: 2.3em;
+  line-height: 1.08;
+  font-weight: 700;
+  margin: 0 0 0.2em;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
 
 .ko-hero__title {
-  font-size: 1.15em;
+  font-size: 1.1em;
   font-weight: 500;
-  margin: 0 0 0.9em;
-  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 0.85em;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .ko-hero__lede {
-  font-size: 1.05em;
+  font-size: 1.02em;
   line-height: 1.6;
-  margin: 0 0 1.5em;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 46ch;
+  margin: 0 0 1.4em;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 48ch;
 }
 
-.ko-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-}
+.ko-hero__actions { display: flex; flex-wrap: wrap; gap: 0.65rem; }
 
 .ko-btn {
   display: inline-block;
-  padding: 0.7em 1.3em;
-  border-radius: 10px;
+  padding: 0.65em 1.25em;
+  border-radius: 9px;
   font-weight: 600;
-  font-size: 0.98em;
+  font-size: 0.96em;
   text-decoration: none;
-  transition: transform 0.12s ease, background 0.15s ease, box-shadow 0.15s ease;
-  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
 }
-
-.ko-btn:hover {
-  transform: translateY(-1px);
-}
+.ko-btn:hover { transform: translateY(-1px); }
 
 .ko-btn--solid {
   background: #ffffff;
   color: $accent-dark !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
-
-.ko-btn--solid:hover {
-  background: #f2fbf9;
-}
+.ko-btn--solid:hover { background: #f2fbf9; }
 
 .ko-btn--ghost {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.10);
   color: #ffffff !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
 }
-
-.ko-btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.22);
-}
+.ko-btn--ghost:hover { background: rgba(255, 255, 255, 0.2); }
 
 /* --------------------------------------------------------------------------
-   3. Homepage SECTIONS + CARDS
+   5. Homepage SECTIONS + CARDS  (calmer)
    -------------------------------------------------------------------------- */
 
-.ko-section {
-  margin: 2.5rem 0;
-}
+.ko-section { margin: 2.25rem 0; }
 
 .ko-section__head {
   display: flex;
@@ -233,13 +277,14 @@ hr {
 }
 
 .ko-section__title {
-  font-size: 1.6em;
-  font-weight: 800;
+  font-size: 1.45em;
+  font-weight: 700;
   color: $accent-darker !important;
-  margin: 0 0 1.1rem;
+  margin: 0 0 1rem;
   letter-spacing: -0.01em;
-  position: relative;
   padding-bottom: 0.35rem;
+  position: relative;
+  border-bottom: none;
 }
 
 .ko-section__title:after {
@@ -247,10 +292,10 @@ hr {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 54px;
-  height: 4px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, $accent 0%, $accent-bright 100%);
+  width: 46px;
+  height: 3px;
+  border-radius: 3px;
+  background: $accent;
 }
 
 .ko-link-more {
@@ -260,80 +305,76 @@ hr {
   white-space: nowrap;
 }
 
-.ko-cards {
-  display: grid;
-  gap: 1.25rem;
+/* About prose block */
+.ko-about .ko-prose p {
+  color: #3c4746;
+  margin: 0 0 1em;
 }
 
-.ko-cards--3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.ko-cards--2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+.ko-cards { display: grid; gap: 1.1rem; }
+.ko-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ko-cards--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .ko-card {
   background: #ffffff;
-  border: 1px solid #e6ebe9;
-  border-radius: 16px;
-  padding: 1.5rem 1.4rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid $hairline;
+  border-radius: 14px;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .ko-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(15, 118, 110, 0.12);
-  border-color: #cfeae5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 118, 110, 0.09);
+  border-color: $tint-border;
 }
 
 .ko-card__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.25em;
   color: $accent-dark;
   background: $tint;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .ko-card__title {
-  font-size: 1.15em;
+  font-size: 1.1em;
   font-weight: 700;
   color: $accent-darker !important;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.45rem;
 }
 
 .ko-card__body {
   margin: 0;
   color: $muted;
-  font-size: 0.97em;
+  font-size: 0.95em;
   line-height: 1.6;
 }
 
 /* Featured publications */
 .ko-pub {
   background: #ffffff;
-  border: 1px solid #e6ebe9;
-  border-left: 5px solid $accent;
-  border-radius: 14px;
-  padding: 1.5rem 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid $hairline;
+  border-left: 4px solid $accent;
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
 .ko-pub:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(15, 118, 110, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 118, 110, 0.09);
 }
 
 .ko-pub__venue {
   display: inline-block;
-  font-size: 0.78em;
+  font-size: 0.74em;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -341,41 +382,34 @@ hr {
   background: $tint;
   padding: 0.28em 0.7em;
   border-radius: 999px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .ko-pub__title {
-  font-size: 1.18em;
+  font-size: 1.12em;
   font-weight: 700;
   line-height: 1.3;
   color: $accent-darker !important;
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.5rem;
 }
 
 .ko-pub__excerpt {
-  margin: 0 0 1rem;
+  margin: 0 0 0.9rem;
   color: $muted;
-  font-size: 0.97em;
+  font-size: 0.95em;
   line-height: 1.6;
 }
 
-.ko-pub__link {
-  font-weight: 700;
-  color: $accent !important;
-  text-decoration: none;
-}
-
-.ko-pub__link:hover {
-  color: $accent-dark !important;
-}
+.ko-pub__link { font-weight: 700; color: $accent !important; text-decoration: none; }
+.ko-pub__link:hover { color: $accent-dark !important; }
 
 /* Contact strip */
 .ko-contact {
-  margin: 3rem 0 1rem;
-  border-radius: 18px;
+  margin: 2.75rem 0 1rem;
+  border-radius: 16px;
   background: $tint;
-  border: 1px solid #d6efe9;
-  padding: 2rem 2.25rem;
+  border: 1px solid $tint-border;
+  padding: 1.9rem 2.1rem;
 }
 
 .ko-contact__inner {
@@ -387,26 +421,21 @@ hr {
 }
 
 .ko-contact__title {
-  font-size: 1.5em;
-  font-weight: 800;
+  font-size: 1.35em;
+  font-weight: 700;
   color: $accent-darker !important;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.35rem;
 }
 
-.ko-contact__body {
-  margin: 0;
-  color: #3a4a48;
-  max-width: 60ch;
-}
-
+.ko-contact__body { margin: 0; color: #3c4746; max-width: 60ch; }
 .ko-contact__body a {
   color: $accent-dark !important;
   font-weight: 600;
-  border-bottom: 1px solid rgba(15, 118, 110, 0.35) !important;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.32) !important;
 }
 
 /* --------------------------------------------------------------------------
-   4. Responsive — tablet & phone
+   6. Responsive — tablet & phone
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 900px) {
@@ -417,22 +446,20 @@ hr {
   .ko-hero {
     flex-direction: column;
     text-align: center;
-    padding: 2.25rem 1.4rem;
-    gap: 1.5rem;
+    padding: 2rem 1.4rem;
+    gap: 1.4rem;
   }
-  .ko-hero__photo img { width: 150px; height: 150px; }
-  .ko-hero__name { font-size: 2.1em; }
+  .ko-hero__photo img { width: 140px; height: 140px; }
+  .ko-hero__name { font-size: 2em; }
   .ko-hero__lede { margin-left: auto; margin-right: auto; }
   .ko-hero__actions { justify-content: center; }
-  .ko-cards--3,
-  .ko-cards--2 { grid-template-columns: 1fr; }
+  .ko-cards--3, .ko-cards--2 { grid-template-columns: 1fr; }
   .ko-contact__inner { flex-direction: column; align-items: flex-start; text-align: left; }
 }
 
 /* --------------------------------------------------------------------------
-   5. Inner-page mobile profile card (Research / Teaching / CV pages that
-      still show the author sidebar). Turns the cramped avatar + "Follow"
-      dropdown into a clean centred card with a large photo + visible links.
+   7. Inner-page mobile profile card (Research / Teaching / CV pages that
+      still show the author sidebar).
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 924px) {
@@ -444,23 +471,18 @@ hr {
     margin: 0 auto 1.5em;
   }
 
-  .author__avatar {
-    display: block;
-    width: auto;
-    float: none;
-    margin: 0 auto;
-  }
+  .author__avatar { display: block; width: auto; float: none; margin: 0 auto; }
 
   .author__avatar img {
     display: block;
-    width: 128px;
-    height: 128px;
-    max-width: 128px;
+    width: 124px;
+    height: 124px;
+    max-width: 124px;
     margin: 0 auto;
     padding: 4px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #e6e8ea;
+    border: 1px solid $hairline;
     box-shadow: 0 3px 14px rgba(0, 0, 0, 0.10);
   }
 
@@ -468,15 +490,15 @@ hr {
     display: block;
     width: 100%;
     padding: 0;
-    margin-top: 0.75em;
+    margin-top: 0.7em;
     line-height: 1.35;
   }
 
   .sidebar .author__name,
   .author__name {
-    font-size: 1.35em;
+    font-size: 1.3em;
     font-weight: 700;
-    margin: 0.35em 0 0.15em;
+    margin: 0.3em 0 0.15em;
   }
 
   .author__bio,
@@ -486,14 +508,8 @@ hr {
     font-size: 0.95em;
   }
 
-  .author__urls-wrapper {
-    display: block;
-    text-align: left;
-  }
-
-  .author__urls-wrapper > button.btn {
-    display: none;
-  }
+  .author__urls-wrapper { display: block; text-align: left; }
+  .author__urls-wrapper > button.btn { display: none; }
 
   .author__urls {
     display: block !important;
@@ -509,43 +525,25 @@ hr {
   }
 
   .author__urls:before,
-  .author__urls:after {
-    display: none !important;
-  }
+  .author__urls:after { display: none !important; }
 
   .author__urls li {
     white-space: normal;
     border-bottom: 1px solid #f0f1f2;
   }
-
-  .author__urls li:last-child {
-    border-bottom: 0;
-  }
+  .author__urls li:last-child { border-bottom: 0; }
 
   .author__urls a {
     display: block;
     padding: 11px 6px;
     font-size: 1em;
     color: #3a4045;
+    border-bottom: 0 !important;
   }
-
-  .author__urls a:hover {
-    color: $accent;
-  }
-
+  .author__urls a:hover { color: $accent; }
   .author__urls i,
-  .author__urls .ai {
-    color: $accent;
-    margin-right: 4px;
-  }
+  .author__urls .ai { color: $accent; margin-right: 4px; }
 
-  .page {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  .greedy-nav .visible-links a {
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-  }
+  .page { padding-left: 1em; padding-right: 1em; }
+  .greedy-nav .visible-links a { padding-top: 0.6em; padding-bottom: 0.6em; }
 }

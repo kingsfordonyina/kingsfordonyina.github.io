@@ -26,9 +26,13 @@ redirect_from:
   </div>
 </section>
 
-I am a PhD Candidate in Public Policy Analysis at [University of North Carolina at Charlotte](https://academics.charlotte.edu/program/public-policy-ph-d-on-campus/). My research sits at the intersection of social policy, international development, and applied microeconometrics. I study how the design, timing, and implementation of public policies shape well-being over the life course, particularly among economically vulnerable populations.
-
-I focus especially on social safety nets. I study how these programs shape the lives of intended beneficiaries and how they alter opportunities, constraints, and outcomes for other household members and future generations. Empirically, my work spans the mature welfare state of the United States and the evolving social protection systems of sub-Saharan Africa. Across these settings, I aim to produce rigorous evidence that informs policies designed to improve opportunity and reduce disadvantage.
+<section class="ko-section ko-about">
+  <h2 class="ko-section__title">About</h2>
+  <div class="ko-prose">
+    <p>I am a PhD Candidate in Public Policy Analysis at <a href="https://academics.charlotte.edu/program/public-policy-ph-d-on-campus/">the University of North Carolina at Charlotte</a>. My research sits at the intersection of social policy, international development, and applied microeconometrics. I study how the design, timing, and implementation of public policies shape well-being over the life course, particularly among economically vulnerable populations.</p>
+    <p>I focus especially on social safety nets — how these programs shape the lives of intended beneficiaries, and how they alter opportunities, constraints, and outcomes for other household members and future generations. Empirically, my work spans the mature welfare state of the United States and the evolving social protection systems of sub-Saharan Africa. Across these settings, I aim to produce rigorous evidence that informs policies designed to improve opportunity and reduce disadvantage.</p>
+  </div>
+</section>
 
 <section class="ko-section">
   <h2 class="ko-section__title">Research interests</h2>
