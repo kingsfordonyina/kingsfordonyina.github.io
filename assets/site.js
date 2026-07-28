@@ -33,38 +33,6 @@
       });
     });
 
-    /* --- Typewriter tagline in the hero --- */
-    var typedEl = document.getElementById('typed');
-    if (typedEl) {
-      var phrases = [
-        'social safety nets',
-        'international development',
-        'applied econometrics',
-        'cash transfers & welfare',
-        'policy that shapes lives'
-      ];
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) {
-        typedEl.textContent = phrases[0];
-      } else {
-        var pi = 0, ci = 0, deleting = false;
-        var tick = function () {
-          var word = phrases[pi];
-          if (!deleting) {
-            ci++;
-            typedEl.textContent = word.slice(0, ci);
-            if (ci === word.length) { deleting = true; return setTimeout(tick, 1500); }
-          } else {
-            ci--;
-            typedEl.textContent = word.slice(0, ci);
-            if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; return setTimeout(tick, 350); }
-          }
-          setTimeout(tick, deleting ? 45 : 85);
-        };
-        setTimeout(tick, 600);
-      }
-    }
-
     /* --- Animate News timeline into view --- */
     var newsLists = document.querySelectorAll('.news');
     if ('IntersectionObserver' in window) {
