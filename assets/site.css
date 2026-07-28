@@ -183,13 +183,16 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 32px 3rem;border-top:1
 .tag{font-size:.82rem;background:var(--accent-soft);color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:.25rem .75rem;}
 .home-main > h2:first-child{margin-top:0;}
 
-/* Green biography hero (HugoBlox academic-cv style) */
-.hero-green{
+/* Green biography hero + page-title banner (HugoBlox academic-cv style) */
+.hero-green,.page-hero{
   width:100%;color:#fff;
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 0 L40 80 L80 0 Z' fill='%23ffffff' fill-opacity='0.025'/%3E%3C/svg%3E"),
     linear-gradient(135deg,#1c6047 0%,#0f3d2d 55%,#0a2f22 100%);
 }
+.page-hero-inner{max-width:1080px;margin:0 auto;padding:2.1rem 32px;}
+.page-hero h1{color:#fff;margin:0;font-size:2rem;}
+.page-hero p{color:rgba(255,255,255,.85);margin:.45rem 0 0;max-width:72ch;}
 .hero-inner{max-width:1120px;margin:0 auto;padding:2.8rem 32px;display:grid;grid-template-columns:250px 1fr;gap:2.8rem;align-items:start;}
 .hero-left{text-align:center;}
 .hero-left .avatar{width:158px;height:158px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.85);box-shadow:0 8px 22px rgba(0,0,0,.3);}
@@ -221,6 +224,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 32px 3rem;border-top:1
   .sidebar{position:static;}
   .hero-inner{grid-template-columns:1fr;gap:1.6rem;padding:2rem 20px;}
   .hero-facts{grid-template-columns:1fr;gap:1.4rem;}
+  .page-hero-inner{padding:1.7rem 20px;}
 }
 @media(max-width:600px){
   h1{font-size:1.85rem;}
