@@ -1,3 +1,0 @@
-git add _sass/_custom.scss assets/css/main.scss
-git commit -m "Modernize mobile profile layout and site polish"
-git push
