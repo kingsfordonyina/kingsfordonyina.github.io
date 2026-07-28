@@ -164,10 +164,31 @@ p{margin:0 0 1.05rem;}
 
 footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 32px 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;}
 
+/* Home two-column layout (Academic CV style) */
+.home-grid{display:grid;grid-template-columns:290px 1fr;gap:3rem;align-items:start;}
+.sidebar{position:sticky;top:86px;}
+.sidebar .avatar{display:block;width:160px;height:160px;border-radius:50%;object-fit:cover;border:1px solid var(--line);margin:0 auto;}
+.sidebar .pname{font-size:1.4rem;font-weight:700;text-align:center;margin:1rem 0 .1rem;color:var(--fg);}
+.sidebar .prole{text-align:center;font-weight:500;margin:.2rem 0 .1rem;}
+.sidebar .porg{text-align:center;color:var(--muted);font-size:.93rem;margin:0 0 .9rem;}
+.sidebar .socials{justify-content:center;margin-bottom:1.1rem;}
+.sidebar .btn-cv{display:block;text-align:center;}
+.side-h{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:1.6rem 0 .7rem;padding-bottom:.3rem;border-bottom:1px solid var(--line);}
+.edu-list{list-style:none;padding:0;margin:0;}
+.edu-list li{margin:0 0 .8rem;}
+.edu-list .deg{display:block;font-weight:600;font-size:.95rem;color:var(--fg);}
+.edu-list .sch{color:var(--muted);font-size:.9rem;}
+.edu-list .yr{color:var(--accent);font-size:.82rem;font-weight:600;}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;}
+.tag{font-size:.82rem;background:var(--accent-soft);color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:.25rem .75rem;}
+.home-main > h2:first-child{margin-top:0;}
+
 @media(max-width:820px){
   .site-header .bar,main,footer{padding-left:20px;padding-right:20px;}
   .videos{grid-template-columns:1fr;}
   .profile__side{flex-basis:auto;width:100%;}
+  .home-grid{grid-template-columns:1fr;gap:2rem;}
+  .sidebar{position:static;}
 }
 @media(max-width:600px){
   h1{font-size:1.85rem;}

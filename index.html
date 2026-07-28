@@ -7,7 +7,7 @@
 <meta name="description" content="Kingsford Onyina — PhD candidate in Public Policy at UNC Charlotte. Research on social safety nets, international development, and applied econometrics.">
 <link rel="icon" href="/images/favicon.ico">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/site.css?v=10">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}};</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,8 +29,8 @@
   </header>
 
   <main>
-    <section class="profile">
-      <aside class="profile__side">
+    <div class="home-grid">
+      <aside class="sidebar">
         <img class="avatar" src="/images/king2_pic.jpeg" alt="Kingsford Onyina">
         <p class="pname">Kingsford Onyina</p>
         <p class="prole">PhD Candidate, Public Policy</p>
@@ -45,58 +45,48 @@
           <a href="https://twitter.com/KingsfordO_" aria-label="X" title="X"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="https://www.youtube.com/@kingsfordonyina2101" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
-      </aside>
-
-      <div class="profile__main">
-        <h1 class="pm-h">Hello, I'm Kingsford 👋</h1>
-        <p>I'm a PhD candidate in Public Policy at the <a href="https://academics.charlotte.edu/program/public-policy-ph-d-on-campus/">University of North Carolina at Charlotte</a>. I use applied microeconometrics to study <b>social safety nets</b>, <b>international development</b>, and how public policy shapes the well-being of economically vulnerable households — across both the United States and sub-Saharan Africa.</p>
         <a class="btn-cv" href="/new_dossier/CV_Kingsford.pdf"><i class="fa-solid fa-download"></i> Download CV</a>
 
-        <div class="facts">
-          <div>
-            <h4>Interests</h4>
-            <ul class="interest-list">
-              <li>🛟 Social safety nets</li>
-              <li>🌍 International development policy</li>
-              <li>📊 Applied econometrics</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Education</h4>
-            <ul class="edu">
-              <li><b>Ph.D. Public Policy</b><span>University of North Carolina at Charlotte</span></li>
-              <li><b>M.A. Economics</b><span>Eastern Illinois University</span></li>
-              <li><b>B.A. Economics &amp; Political Science</b><span>University of Education, Winneba</span></li>
-            </ul>
-          </div>
+        <p class="side-h">Education</p>
+        <ul class="edu-list">
+          <li><span class="deg">Ph.D. Public Policy</span><span class="sch">UNC Charlotte · <span class="yr">Expected 2027</span></span></li>
+          <li><span class="deg">M.A. Economics</span><span class="sch">Eastern Illinois University · <span class="yr">2023</span></span></li>
+          <li><span class="deg">B.A. Economics &amp; Political Science</span><span class="sch">University of Education, Winneba · <span class="yr">2020</span></span></li>
+        </ul>
+
+        <p class="side-h">Interests</p>
+        <div class="tags">
+          <span class="tag">Social policy</span>
+          <span class="tag">Social safety nets</span>
+          <span class="tag">Impact evaluation</span>
+          <span class="tag">International development</span>
+          <span class="tag">Applied econometrics</span>
+        </div>
+      </aside>
+
+      <div class="home-main">
+        <h2>Hello, I'm Kingsford 👋</h2>
+        <p class="prose">I'm a PhD candidate in Public Policy at the <a href="https://academics.charlotte.edu/program/public-policy-ph-d-on-campus/">University of North Carolina at Charlotte</a>. I use applied microeconometrics to study <b>social safety nets</b>, <b>international development</b>, and how public policy shapes the well-being of economically vulnerable households — across both the United States and sub-Saharan Africa.</p>
+        <p class="prose">My work spans the mature welfare state of the U.S. and the evolving social protection systems of sub-Saharan Africa, and aims to produce rigorous evidence that informs policies designed to improve opportunity and reduce disadvantage. <a href="/publications/">See my research →</a></p>
+
+        <h2>News</h2>
+        <ul class="news">
+          <li><span class="date">Fall 2026</span><p class="what">I will be teaching <b>ECON 3112: Econometrics</b> at UNC Charlotte. <a href="/new_dossier/ECON_3112-001_2026.pdf">View the syllabus →</a></p></li>
+          <li><span class="date">New</span><p class="what">My job market paper is now available: <a href="https://drive.google.com/file/d/10zFlDcEf3Rf0k_J9y7YSw73JDpGiMHSY/view?usp=sharing"><i>Still Echoing: Welfare Reform and the Noncognitive Skill Formation of the Next Generation</i></a>.</p></li>
+          <li><span class="date">Call for Papers</span><p class="what"><b>QuantBridge</b> — the Fall 2026 Call for Papers is open. <a href="/quantbridge/">See details and submit →</a></p></li>
+          <li><span class="date">2026</span><p class="what">Presenting my research at the <b>AEA</b>, <b>APPAM</b>, and <b>SEA</b> annual meetings.</p></li>
+          <li><span class="date">June 2026</span><p class="what">New article in <i>Social Policy and Society</i> (Cambridge): <a href="https://www.cambridge.org/core/journals/social-policy-and-society/article/universal-access-divided-opinions-a-latent-class-analysis-of-public-perceptions-of-ghanas-free-senior-high-school-policy/3134970047E90836BD48FC9DDC9FD462">Universal Access, Divided Opinions</a>.</p></li>
+        </ul>
+
+        <h2>Contact</h2>
+        <div class="contact-panel">
+          <p>I am always glad to discuss research, collaborations, and the job market. Reach me at <a href="mailto:konyina@charlotte.edu">konyina@charlotte.edu</a> or <a href="mailto:kingsford.onyina1@gmail.com">kingsford.onyina1@gmail.com</a>.</p>
         </div>
       </div>
-    </section>
-
-    <h2>News</h2>
-    <ul class="news">
-      <li><span class="date">Fall 2026</span><p class="what">I will be teaching <b>ECON 3112: Econometrics</b> at UNC Charlotte. <a href="/new_dossier/ECON_3112-001_2026.pdf">View the syllabus →</a></p></li>
-      <li><span class="date">New</span><p class="what">My job market paper is now available: <a href="https://drive.google.com/file/d/10zFlDcEf3Rf0k_J9y7YSw73JDpGiMHSY/view?usp=sharing"><i>Still Echoing: Welfare Reform and the Noncognitive Skill Formation of the Next Generation</i></a>.</p></li>
-      <li><span class="date">Call for Papers</span><p class="what"><b>QuantBridge</b> — the Fall 2026 Call for Papers is open. <a href="/quantbridge/">See details and submit →</a></p></li>
-      <li><span class="date">2026</span><p class="what">Presenting my research at the <b>AEA</b>, <b>APPAM</b>, and <b>SEA</b> annual meetings.</p></li>
-      <li><span class="date">June 2026</span><p class="what">New article in <i>Social Policy and Society</i> (Cambridge): <a href="https://www.cambridge.org/core/journals/social-policy-and-society/article/universal-access-divided-opinions-a-latent-class-analysis-of-public-perceptions-of-ghanas-free-senior-high-school-policy/3134970047E90836BD48FC9DDC9FD462">Universal Access, Divided Opinions</a> — public perceptions of Ghana's Free SHS policy.</p></li>
-    </ul>
-
-    <h2>Contact</h2>
-    <div class="contact-panel">
-      <p>I am always glad to discuss research, collaborations, and the job market. Reach me at <a href="mailto:konyina@charlotte.edu">konyina@charlotte.edu</a> or <a href="mailto:kingsford.onyina1@gmail.com">kingsford.onyina1@gmail.com</a>.</p>
-      <p class="muted">
-        <a href="https://scholar.google.com/citations?user=eewM6jwAAAAJ&hl=en">Google Scholar</a> ·
-        <a href="https://orcid.org/0009-0005-6302-2797">ORCID</a> ·
-        <a href="https://www.researchgate.net/profile/Kingsford-Onyina-2">ResearchGate</a> ·
-        <a href="https://github.com/kingsfordonyina">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/konyina">LinkedIn</a> ·
-        <a href="https://twitter.com/KingsfordO_">X</a>
-      </p>
     </div>
   </main>
 
   <footer>© 2026 Kingsford Onyina · Charlotte, NC</footer>
-  <script src="/assets/site.js?v=7"></script>
+  <script src="/assets/site.js?v=10"></script>
 </body>
 </html>
