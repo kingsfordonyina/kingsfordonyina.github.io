@@ -79,12 +79,23 @@ p{margin:0 0 1.05rem;}
 .facts .edu b{display:block;color:var(--fg);font-weight:600;font-size:.98rem;}
 .facts .edu span{color:var(--muted);font-size:.9rem;}
 
-/* News */
-.news{list-style:none;padding:0;margin:.3rem 0 0;}
-.news li{display:flex;gap:1.4rem;padding:.75rem 0;border-top:1px solid var(--line);}
-.news li:first-child{border-top:0;}
-.news .date{flex:0 0 120px;color:var(--accent);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.03em;padding-top:2px;}
+/* News — timeline with scroll-in animation */
+.news{list-style:none;padding:0;margin:.6rem 0 0;}
+.news li{position:relative;padding:0 0 1.5rem 1.7rem;border-left:2px solid var(--line);margin-left:6px;}
+.news li:last-child{border-left-color:transparent;padding-bottom:0;}
+.news li::before{content:"";position:absolute;left:-8px;top:3px;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid var(--bg);transition:box-shadow .18s ease,transform .18s ease;}
+.news li:hover::before{box-shadow:0 0 0 5px var(--accent-soft);transform:scale(1.12);}
+.news .date{display:block;color:var(--accent);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.15rem;}
 .news .what{margin:0;}
+@keyframes newsIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.news.animate li{animation:newsIn .55s cubic-bezier(.2,.7,.3,1) both;}
+.news.animate li:nth-child(1){animation-delay:.04s;}
+.news.animate li:nth-child(2){animation-delay:.12s;}
+.news.animate li:nth-child(3){animation-delay:.2s;}
+.news.animate li:nth-child(4){animation-delay:.28s;}
+.news.animate li:nth-child(5){animation-delay:.36s;}
+.news.animate li:nth-child(6){animation-delay:.44s;}
+@media (prefers-reduced-motion: reduce){.news.animate li{animation:none;}}
 
 /* Research interests list */
 .interests{list-style:none;padding:0;margin:.3rem 0 0;}
@@ -228,6 +239,4 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 32px 3rem;border-top:1
 }
 @media(max-width:600px){
   h1{font-size:1.85rem;}
-  .news li{flex-direction:column;gap:.15rem;}
-  .news .date{flex-basis:auto;}
 }

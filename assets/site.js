@@ -33,6 +33,21 @@
       });
     });
 
+    /* --- Animate News timeline into view --- */
+    var newsLists = document.querySelectorAll('.news');
+    if ('IntersectionObserver' in window) {
+      newsLists.forEach(function (list) {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { list.classList.add('animate'); obs.disconnect(); }
+          });
+        }, { threshold: 0.15 });
+        io.observe(list);
+      });
+    } else {
+      newsLists.forEach(function (list) { list.classList.add('animate'); });
+    }
+
     /* --- Show / hide all abstracts --- */
     var showAll = document.getElementById('showAllAbstracts');
     if (showAll) {
