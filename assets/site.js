@@ -52,7 +52,8 @@
     var showAll = document.getElementById('showAllAbstracts');
     if (showAll) {
       showAll.addEventListener('click', function () {
-        var expand = showAll.getAttribute('data-state') !== 'open';
+        var expand = showAll.getAttribute('aria-checked') !== 'true';
+        showAll.setAttribute('aria-checked', expand ? 'true' : 'false');
         document.querySelectorAll('.pub:not(.pub--featured) .abstract').forEach(function (ab) {
           ab.classList.toggle('is-open', expand);
         });
@@ -60,8 +61,6 @@
           btn.textContent = expand ? 'Hide abstract' : 'Abstract';
           btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
         });
-        showAll.setAttribute('data-state', expand ? 'open' : 'closed');
-        showAll.textContent = expand ? 'Hide all abstracts' : 'Show all abstracts';
       });
     }
   });

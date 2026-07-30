@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://kingsfordonyina.github.io/images/king2_pic.jpeg">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="/assets/site.css?v=23">
+<link rel="stylesheet" href="/assets/site.css?v=24">
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}};</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -49,7 +49,10 @@
       <li class="interest"><span class="emoji">📊</span><b>Applied econometrics</b> — <span class="d">panel data, difference-in-differences, and causal methods for credible policy evidence.</span></li>
     </ul>
 
-    <p class="abstract-controls"><button class="show-all" id="showAllAbstracts" type="button" data-state="closed">Show all abstracts</button></p>
+    <div class="abstract-controls">
+      <span class="switch-label" id="showAllLabel">Show all abstracts</span>
+      <button class="switch" id="showAllAbstracts" type="button" role="switch" aria-checked="false" aria-labelledby="showAllLabel"><span class="switch-knob"></span></button>
+    </div>
 
     <h2>Job Market Paper</h2>
     <div class="pub pub--featured">
@@ -151,6 +154,6 @@
   </main>
 
   <footer>© 2026 Kingsford Onyina · Charlotte, NC · Last updated July 2026</footer>
-  <script src="/assets/site.js?v=23"></script>
+  <script src="/assets/site.js?v=24"></script>
 </body>
 </html>
