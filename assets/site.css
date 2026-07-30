@@ -200,8 +200,10 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 32px 3rem;border-top:1
 .hero-green,.page-hero{
   width:100%;color:#fff;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 0 L40 80 L80 0 Z' fill='%23ffffff' fill-opacity='0.025'/%3E%3C/svg%3E"),
-    linear-gradient(135deg,#1c6047 0%,#0f3d2d 55%,#0a2f22 100%);
+    radial-gradient(135% 135% at 88% -25%, rgba(255,255,255,.13) 0%, rgba(255,255,255,0) 42%),
+    radial-gradient(120% 120% at 8% 115%, rgba(0,0,0,.18) 0%, rgba(0,0,0,0) 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M0 0 L70 140 L140 0 Z' fill='%23ffffff' fill-opacity='0.018'/%3E%3Cpath d='M70 140 L140 0 L140 140 Z' fill='%23ffffff' fill-opacity='0.035'/%3E%3Cpath d='M0 0 L0 140 L70 140 Z' fill='%23ffffff' fill-opacity='0.012'/%3E%3Cpath d='M0 140 L70 140 L0 70 Z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(135deg,#1e6a4d 0%,#0f3d2d 55%,#092a1f 100%);
 }
 .page-hero-inner{max-width:1080px;margin:0 auto;padding:2.1rem 32px;}
 .page-hero h1{color:#fff;margin:0;font-size:2rem;}
