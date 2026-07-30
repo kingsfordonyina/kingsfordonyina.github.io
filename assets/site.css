@@ -31,6 +31,7 @@ body{
 }
 a{color:var(--accent);text-decoration:none;}
 a:hover{color:var(--accent-hover);text-decoration:underline;text-underline-offset:2px;}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:2px;border-radius:3px;}
 
 /* Header */
 .site-header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20;}
