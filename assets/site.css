@@ -247,7 +247,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 24px 3rem;border-top:1
 .hero-right h2{font-family:var(--serif);color:var(--fg);border:0;padding:0;margin:.1rem 0 .8rem;font-size:1.9rem;}
 .hero-right > p{color:var(--fg);max-width:66ch;}
 /* "On the job market" status badge with pulsing dot */
-.jobmarket{display:inline-flex;align-items:center;gap:.55rem;background:var(--accent-soft);border:1px solid var(--accent);color:var(--accent);font-size:.8rem;font-weight:500;padding:.34rem .8rem;border-radius:999px;margin:.1rem 0 1rem;}
+.jobmarket{display:inline-flex;align-items:center;gap:.55rem;background:var(--accent-soft);border:1px solid var(--accent);color:var(--accent);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:.34rem .8rem;border-radius:999px;margin:.1rem 0 1rem;}
 .jm-dot{position:relative;width:9px;height:9px;border-radius:50%;background:#00ab37;flex:0 0 auto;}
 .jm-dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#00ab37;animation:jmPing 1.9s cubic-bezier(0,0,.2,1) infinite;}
 @keyframes jmPing{0%{transform:scale(1);opacity:.75;}80%,100%{transform:scale(2.8);opacity:0;}}
