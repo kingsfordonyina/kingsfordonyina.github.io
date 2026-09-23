@@ -222,6 +222,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:1.6rem 24px 3rem;border-top:1
 .about-photo .socials{margin-top:.85rem;}
 .about-bio p{margin:0 0 1rem;color:var(--fg);}
 .about-bio .hero-actions{margin-top:.4rem;}
+.hl{color:var(--accent);font-weight:600;}
 @media(max-width:640px){
   .about-photo{float:none;width:100%;margin:0 auto 1.5rem;}
   .about-photo .avatar{width:210px;margin:0 auto;}
