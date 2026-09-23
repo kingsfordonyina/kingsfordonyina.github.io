@@ -63,6 +63,17 @@
     </div>
   </header>
 
+  <div class="welcome-dock" id="welcomeDock" aria-hidden="true">
+    <div class="welcome-hanger" id="welcomeHanger">
+      <span class="wh-pin"></span>
+      <span class="wh-string"></span>
+      <div class="wh-tag">
+        <div class="wh-tag-top"><span class="wh-hole"></span></div>
+        <div class="wh-tag-body">Welcome!</div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <section class="about">
       <h1 class="about-title">Kingsford Onyina</h1>
@@ -139,5 +150,20 @@
 
   <footer>© 2026 Kingsford Onyina · Charlotte, NC · Last updated August 2026</footer>
   <script src="/assets/site.js?v=28"></script>
+  <script>
+    (function(){
+      var dock=document.getElementById('welcomeDock');
+      var hanger=document.getElementById('welcomeHanger');
+      if(!dock||!hanger) return;
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // Drop in on load
+      requestAnimationFrame(function(){ dock.classList.add('show'); });
+      if(reduce) return;
+      function swing(){ hanger.classList.remove('swing'); void hanger.offsetWidth; hanger.classList.add('swing'); }
+      // First dangle after the drop settles, then every 30s
+      setTimeout(swing, 1000);
+      setInterval(swing, 30000);
+    })();
+  </script>
 </body>
 </html>
